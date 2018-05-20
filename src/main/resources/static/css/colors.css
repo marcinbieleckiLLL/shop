@@ -1,0 +1,44 @@
+.seafoam-color{
+    color: #C4DFE6 !important;
+}
+
+.wave-color{
+    color: #66A5AD !important;
+}
+
+.ocean-color{
+    color: #07575B;
+}
+
+.deep-aqua{
+    color: #003B46
+}
+
+.wave-background{
+    background-color: #66A5AD !important;
+    border-color: #66A5AD !important;
+}
+
+.seafoam-color-with-dark-hover{
+    color: #C4DFE6 !important;
+}
+
+.seafoam-color-with-dark-hover:hover{
+    color: #66A5AD !important;
+}
+
+.seafoam-color-with-light-hover{
+    color: #C4DFE6 !important;
+}
+
+.seafoam-color-with-light-hover:hover{
+    color: white !important;
+}
+
+.wave-color-with-light-hover{
+    color: #66A5AD !important;
+}
+
+.wave-color-with-light-hover:hover{
+    color: #C4DFE6 !important;
+}
