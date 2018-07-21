@@ -1,3 +1,3 @@
 # shop
 
-Wersja próbna projektu - brak pliku application.properties.
+Wersja poglądowa projektu - brak pliku application.properties.
