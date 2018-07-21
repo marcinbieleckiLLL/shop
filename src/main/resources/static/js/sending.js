@@ -6,12 +6,15 @@ var SendObject = function(options){
         url: '',
         type: '',
         data: '',
-        success: ''
+        success: '',
+        async: '',
+        returnedValue: ''
     }
     this.construct = function(options){
         $.extend(properties , options);
     }
     this.send = function(){
+        var async = properties.async != null ? properties.async : true;
         var firstParameter = properties.data != null ? (properties.data.length > 0 ? properties.data[0] : null) : null;
         var secondParameter = properties.data != null ? (properties.data.length > 1 ? properties.data[1] : null) : null;
         $.ajax({
@@ -21,10 +24,12 @@ var SendObject = function(options){
                 first: firstParameter,
                 second: secondParameter,
             },
+            async: async,
             success: function (data) {
-                properties.success(data);
+                properties.returnedValue = properties.success(data);
             }
         });
+        return properties.returnedValue;
     }
     this.construct(options);
 }

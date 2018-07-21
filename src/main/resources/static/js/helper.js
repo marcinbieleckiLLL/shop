@@ -23,3 +23,21 @@ function handleShowHideEffect(){
     })
 }
 
+function setupProgressBar(){
+    $("ul[role='tablist']").append("<div class=\"progress-bar\"></div>");
+    $("ul[role='tablist']").append("<div class=\"progress-bar-color\"></div>");
+    resizeProgressBar();
+    $(window).on('resize', function(){
+       resizeProgressBar();
+    });
+}
+
+function resizeProgressBar(){
+    $("ul[role='tablist']").find("li").each(function(index, item){
+        $( this ).css("z-index", "3");
+        $( this ).css("position", "relative");
+        var newMargin =  (1 - window.innerWidth/screen.width) * - 37;
+        $( this ).css("transform", "translateX(" + newMargin + "px)");
+    });
+}
+

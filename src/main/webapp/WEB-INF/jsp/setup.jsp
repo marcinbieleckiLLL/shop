@@ -38,14 +38,33 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="js/knockout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout-validation/2.0.3/knockout.validation.min.js"></script>
+    <script src="js/jquery.steps.min.js"></script>
     <!--own script -->
     <script src="js/helper.js"></script>
     <script src="js/sending.js"></script>
     <script src="js/validation.js"></script>
+    <script src="js/knockout-setup.js"></script>
     <link href="css/socialMedia.css" rel="stylesheet">
     <link href="css/helper.css" rel="stylesheet">
     <link href="css/text.css" rel="stylesheet">
     <link href="css/colors.css" rel="stylesheet">
     <link href="css/margins.css" rel="stylesheet">
+    <link href="css/jquery-steps.css" rel="stylesheet">
 </head>
 <sec:csrfMetaTags />
+<script>
+var knockoutValidationSettings = {
+    insertMessages: true,
+    decorateElement: true,
+    errorMessageClass: 'validationMessage',
+    errorElementClass: 'error',
+    errorClass: 'error',
+    errorsAsTitle: true,
+    parseInputAttributes: false,
+    messagesOnModified: true,
+    decorateElementOnModified: true,
+    decorateInputElement: true
+};
+</script>

@@ -10,7 +10,7 @@
 
     <tag>
         <name>Navbar</name>
-        <tag-class>com.example.demo.NavbarTag</tag-class>
+        <tag-class>com.simplycoolest.utils.tags.NavbarTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>names</name>

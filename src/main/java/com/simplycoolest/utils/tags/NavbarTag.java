@@ -1,8 +1,9 @@
-package com.example.demo;
+package com.simplycoolest.utils.tags;
 
 /**
  * Created by Marcin on 28.04.2018.
  */
+import com.simplycoolest.entities.SocialMediaData;
 import lombok.Setter;
 
 import java.io.IOException;
@@ -54,6 +55,26 @@ public class NavbarTag extends MainTag {
         out.print(LI_START);
         printLi();
         out.print(LI_END);
+        printUserComponent();
+    }
+
+    private void printUserComponent(){
+        if(currentInfo != null && currentInfo.getCurrentUser() != null){
+            try {
+                out.print(formatUserLi());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private String formatUserLi(){
+        if(currentInfo.getCurrentUser() instanceof SocialMediaData){
+            String[] datas = {((SocialMediaData) currentInfo.getCurrentUser()).getImageUrl(), currentInfo.getCurrentUser().getUsername()};
+            return String.format(SOCIAL_MEDIA, datas);
+        }
+        String datas = currentInfo.getCurrentUser().getUsername();
+        return String.format(USER, datas);
     }
 
     private void printLi(){

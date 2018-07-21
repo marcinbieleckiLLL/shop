@@ -22,3 +22,7 @@
 .sm-text{
     font-size: 15px;
 }
+
+.validationMessage:before{
+    content: "* ";
+}
